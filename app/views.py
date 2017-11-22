@@ -21,8 +21,3 @@ def index():
         flash('REQUESTED DATA %s' % form.name.data)
         return str('You Input '+ form.name.data)
     return render_template('formku.html', title='DUmmy form', form=form)
-
-@app.route('/success')
-def success():
-    form = MyForm()
-    return str(form.name.data)
